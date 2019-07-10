@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="178.0" prefWidth="600.0" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ModifierController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="600.0" spacing="30.0">
+         <children>
+            <Label text="Delay or Speed up subtitles:">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="delaySpeedUpSelector" prefWidth="150.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ChoiceBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Label prefHeight="35.0" prefWidth="76.0" text="Seconds:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="secondsField" prefHeight="25.0" prefWidth="104.0" promptText="seconds" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="35.0" prefWidth="105.0" text="Miliseconds:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="milisecondsField" prefHeight="25.0" prefWidth="122.0" promptText="miliseconds" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButtonClicked" text="Update SRT file">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <FlowPane.margin>
+            <Insets left="10.0" />
+         </FlowPane.margin>
+      </Button>
+      <Separator prefWidth="200.0" />
+   </children>
+</FlowPane>
